@@ -23,12 +23,12 @@ async def index():
 async def about():
     return {'Proyecto final de la cohorte 10 acerca de un sistema de recomendacion'}
 
-df_positivo = pd.read_csv('./positive.csv',encoding='utf-8')
+df_positivo = pd.read_csv('./positive2.csv',encoding='utf-8')
 
 
 @app.get('/recomendacionPositives/{id_unic}')
 def recomendacion2(id:int):
-    '''Ingresas un id y te recomienda las similares en una lista'''
+    '''Ingresas un id y te recomienda las similares en una ulista'''
     visited_id = id
 
     if (df_positivo['id_unic'] == visited_id).any():
